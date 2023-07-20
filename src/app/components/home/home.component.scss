@@ -1,0 +1,155 @@
+.demo-inline-calendar-card {
+  width: 300px;
+
+}
+
+
+.player-container {
+
+    user-select: none;
+    position: relative;
+    width: 380px;
+    margin: 0 auto;
+
+    // .infos {
+    //   position: absolute;
+    //   top: 70px;
+    //   right: -100%;
+    //   width: 380px;
+    // }
+
+    .player {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .player-element {
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+
+            &.player-element-lp {
+
+                transform: perspective(2000px);
+                transition: 1s;
+                transform-style: preserve-3d;
+                backface-visibility: hidden;
+                padding: 40px;
+                width: 85%;
+                height: auto;
+                display: inline-block;
+                box-sizing: border-box;
+
+            }
+
+            &.player-element-tonearm {
+
+                position: absolute;
+                top: calc(calc(20px * 2) - 29%);
+                right: calc(calc(20px * 3) - 43%);
+                width: 90%;
+                height: auto;
+
+            }
+
+        }
+
+    }
+
+    .player-controls {
+
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        width: 100%;
+        padding: calc(20px * 2);
+        box-sizing: border-box;
+        align-items: center;
+
+        .player-button {
+
+            position: relative;
+            margin: 0 calc(20px / 2);
+            padding:0 calc(20px / 2);
+            background-color: transparent;
+
+            svg {
+
+                max-height: 24px;
+                width: 100%;
+
+                path {
+                    fill: #5e5e3d;
+                    transition: .35s;
+                }
+            }
+
+            &:focus, &:hover {
+
+                outline: none;
+                cursor: pointer;
+
+                svg path {
+                    fill: #121212;
+                }
+
+            }
+
+            &:first-child {
+                margin-left: 0;
+                padding-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+                padding-right: 0;
+            }
+
+            &.player-button-play {
+
+                display: inline;
+
+                &.paused { display: none; }
+
+            }
+
+            &.player-button-pause {
+
+                display: none;
+
+                &.paused { display: inline; }
+
+            }
+
+        }
+
+    }
+
+    // .player-playlist {
+
+    //     overflow: hidden;
+    //     position: relative;
+    //     margin: 0 auto;
+    //     padding-bottom: calc(20px * 2);
+    //     width: calc(100% - calc(20px * 4));
+    //     box-sizing: border-box;
+    //     list-style-type: decimal-leading-zero;
+    //     padding-left: calc(20px * 1.5);
+
+    //     li {
+
+    //         padding: calc(20px / 5) 0;
+    //         cursor: pointer;
+
+    //         &.current-track {
+    //             font-weight: bold;
+    //         }
+
+    //     }
+
+
+
+}
